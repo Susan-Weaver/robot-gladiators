@@ -7,6 +7,8 @@ var playerMoney = 10;
 console.log(playerName, playerAttack, playerHealth);
 
 var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
+var enemyHealth = 50;
+var enemyAttack = 12;
 console.log(enemyNames);
 console.log(enemyNames[0]);
 console.log(enemyNames[1]);
@@ -19,10 +21,7 @@ for(var i = 0; i < enemyNames.length; i++) {
   console.log(enemyNames[i] + " is at " + i + " index");
 }
 
-var enemyHealth = 50;
-var enemyAttack = 12;
-
-var fight = function() {
+var fight = function(enemyNames) {
   // Alert users that they are starting the round
   window.alert("Welcome to Robot Gladiators!");
 
@@ -80,4 +79,6 @@ var fight = function() {
     //else {
     //window.alert("You need to pick a valid option. Try again!");
 
-fight();
+    for(var i = 0; i < enemyNames.length; i++) {
+      fight(enemyNames[i]);
+    }
